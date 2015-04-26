@@ -21,7 +21,9 @@
            fetch="ssh://git@github.com" />
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com"
+           fetch="git://aosp.tuna.tsinghua.edu.cn/android/"
+           sync-j="4"
+           sync-c="true"
            review="android-review.googlesource.com"
            revision="refs/tags/android-7.0.0_r14" />
 
