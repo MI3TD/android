@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="omnirom_MI3TD"
+           fetch=".."
+           review="gerrit.omnirom.org"
+           revision="android-7.1"
+           />
+
+  <remote  name="MI3TD"
+           fetch=".."
+           revision="cm-14.1"
+           />
+
+  <remove-project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" />
+  <project path="bootable/recovery" name="MI3TD/android_bootable_recovery" groups="pdk" remote="omnirom_MI3TD" />
+  <project path="external/busybox" name="LineageOS/android_external_busybox" revision="cm-13.0" />
+  <project path="hardware/nvidia/power" name="MI3TD/android_hardware_nvidia_power" groups="nvidia_power" remote="MI3TD" revision="master" />
+</manifest>
