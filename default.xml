@@ -2,8 +2,20 @@
 <manifest>
 
   <remote  name="github"
-           fetch=".."
+           fetch="git://github.com"
            review="review.cyanogenmod.org" />
+
+  <remote  name="omnirom"
+           fetch="git://github.com/omnirom"
+           review="gerrit.omnirom.org"
+           revision="refs/tags/android-6.0" />
+
+  <remote  name="omnirom_MI3TD"
+           fetch="git://github.com/MI3TD"
+           review="gerrit.omnirom.org" />
+
+  <remote  name="MI3TD"
+           fetch="git://github.com/MI3TD" />
 
   <remote  name="private"
            fetch="ssh://git@github.com" />
@@ -32,7 +44,8 @@
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" remote="aosp" />
   <project path="art" name="CyanogenMod/android_art" groups="pdk" />
   <project path="bionic" name="CyanogenMod/android_bionic" groups="pdk" />
-  <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" groups="pdk" />
+  <!--project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" groups="pdk" /-->
+  <project path="bootable/recovery" name="android_bootable_recovery" revision="android-6.0" groups="pdk" remote="omnirom_MI3TD" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="dalvik" name="CyanogenMod/android_dalvik" groups="pdk-cw-fs,pdk-fs" />
   <project path="developers/build" name="platform/developers/build" remote="aosp" />
