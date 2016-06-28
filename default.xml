@@ -21,7 +21,7 @@
            fetch="ssh://git@github.com" />
 
   <remote  name="aosp"
-           fetch="git://aosp.tuna.tsinghua.edu.cn/android/"
+           fetch="https://aosp.tuna.tsinghua.edu.cn/android/"
            sync-j="4"
            sync-c="true"
            review="android-review.googlesource.com"
